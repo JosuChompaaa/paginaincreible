@@ -1,0 +1,125 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 40px 20px;
+}
+
+.subtitulo {
+    color: #aaa;
+    font-style: italic;
+}
+
+.card {
+    background: #111;
+    margin: 30px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cursed-btn {
+    background: linear-gradient(45deg, darkred, purple);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.cursed-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px red;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Floating distorted cat */
+.floating-cat {
+    margin-top: 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-cat img {
+    width: 250px;
+    filter: contrast(200%) saturate(300%) blur(1px);
+    transform: skewX(10deg) rotate(3deg);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Glitch effect */
+.glitch {
+    position: relative;
+    font-size: 32px;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.glitch::before {
+    color: red;
+    animation: glitchTop 1s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    color: blue;
+    animation: glitchBottom 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitchTop {
+    0% { clip-path: inset(0 0 70% 0); }
+    100% { clip-path: inset(30% 0 0 0); }
+}
+
+@keyframes glitchBottom {
+    0% { clip-path: inset(70% 0 0 0); }
+    100% { clip-path: inset(0 0 30% 0); }
+}
+
+/* Portal mode */
+.modo-inframundo {
+    background: linear-gradient(90deg, black, darkred, black);
+    animation: fondoLoco 0.4s infinite alternate;
+}
+
+@keyframes fondoLoco {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(200deg); }
+}

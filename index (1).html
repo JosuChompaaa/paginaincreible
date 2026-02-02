@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Michi del Inframundo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="glitch-bg"></div>
+
+    <header>
+        <h1 class="glitch" data-text="MICHI DEL INFRAMUNDO">
+            MICHI DEL INFRAMUNDO
+        </h1>
+        <p class="subtitulo">Invocado accidentalmente a las 3:33 a.m.</p>
+    </header>
+
+    <main>
+
+        <div class="floating-cat">
+            <img src="https://i.imgur.com/Z6X9F7P.png" alt="Michi Cursed">
+        </div>
+
+        <section class="card">
+            <h2>Poderes Oscuros</h2>
+            <ul>
+                <li>🔥 Maúlla en latín</li>
+                <li>🔥 Compila código sin warnings</li>
+                <li>🔥 Aparece cuando decís "pspsps"</li>
+                <li>🔥 Te observa mientras dormís</li>
+            </ul>
+        </section>
+
+        <button class="cursed-btn" onclick="activarModoInframundo()">
+            ABRIR PORTAL
+        </button>
+
+        <p id="mensaje"></p>
+
+    </main>
+
+    <footer>
+        <p>⚠ Sitio no aprobado por el Vaticano</p>
+    </footer>
+
+    <script>
+        function activarModoInframundo() {
+            document.body.classList.toggle("modo-inframundo");
+            document.getElementById("mensaje").innerText =
+                "El portal se ha abierto. El Michi ya está entre nosotros.";
+        }
+    </script>
+
+</body>
+</html>
